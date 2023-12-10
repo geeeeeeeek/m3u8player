@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>m3u8播放器</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="M3U8Player播放器">
+
+    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/social-share.js/1.0.16/css/share.min.css">
+    <script src="https://cdn.staticfile.org/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+    <link href="https://web.sdk.qcloud.com/player/tcplayer/release/v5.1.0/tcplayer.min.css" rel="stylesheet" />
+    <script src="https://web.sdk.qcloud.com/player/tcplayer/release/v5.1.0/tcplayer.v5.1.0.min.js"></script>
+
+ 
+
+    <style>
+
+        @media screen and (max-width: 640px){
+            #player-container-id {
+                height: 200px!important;
+            }
+        }
+        
+        html, body{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .hd {
+            width: 100%;
+            height: 50px;
+            background-color: #0e90d2;
+        }
+
+        .hd .link-list {
+            padding: 0 16px;
+            height: 50px;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+            align-items: center;
+            align-content: center;
+        }
+
+        .hd .link-list a {
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .hd .link-list a:hover {
+            font-weight: bold;
+        }
+
+        .main {
+            padding: 16px 16px;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .main h1 {
+            text-align: center;
+            font-size: 30px;
+            color: #0e90d2;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .main .form {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 24px;
+        }
+
+        .main .form input {
+            flex: 1;
+            height: 40px;
+            border-top: 1px solid #0e90d2;
+            border-left: 1px solid #0e90d2;
+            border-bottom: 1px solid #0e90d2;
+            border-right: 0px;
+            padding-left: 10px;
+        }
+
+        .main .form input:focus {
+            outline: #0e90d2;
+        }
+
+        .main .form img {
+            margin-left: -4px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .main #share {
+            text-align: center;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        .main p {
+            font-size: 15px;
+        }
+
+        .main .alert a {
+            color: #501445;
+            text-decoration: underline;
+        }
+
+        .main h2 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header class="hd">
+        <div class="link-list">
+            <a href="/">首页</a>
+            <a href="/?ref=m3u8">M3U8</a>
+        </div>
+    </header>
+
+    <div class="main">
+        <h1>m3u8在线播放器</h1>
+
+
+        <div class="form">
+            <input type="text" id="url"  value="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" placeholder="请输入m3u8播放地址" autocomplete="off">
+            <img src="./images/ic-play.png" onclick="play()"/>
+        </div>
+
+
+        <video id="player-container-id"  preload="auto" playsinline webkit-playsinline style="width: 100%;min-height:200px; background:#000;">
+        </video>
+
+        <div id="share"></div>
+
+
+        <div class="alert alert-success" role="alert">
+            <p>
+                嵌入网站:
+            </p>
+            <p>
+            <pre>&lt;iframe src="https://m3u8player.org/player.html?url=https://****index.m3u8"&gt;&lt;/iframe&gt;</pre>
+            </p>
+            <p>
+                M3U8Player 是一款实现 HTTP 实时流客户端的 Chrome 浏览器扩展工具。你可以播放 .m3u8 HTTP Live Streaming (HLS)。它依靠 HTML5
+                视频和媒体源扩展进行播放。它的工作原理是将 MPEG-2 传输流和 AAC/MP3 流转换成 ISO BMFF (MP4) 片段。如果浏览器中有 Web Worker，可使用它异步执行转码。它还支持 HLS
+                + fmp4。
+            </p>
+            <h2>什么是m3u8文件?</h2>
+            <p>
+                文件扩展名为 <a href="https://en.wikipedia.org/wiki/M3U#M3U8">M3U8</a> 的文件是一种 UTF-8 编码的音频播放列表文件。它们是纯文本文件，音频和视频播放器都可以用它们来描述媒体文件的位置。
+            <p>
+                例如，一个 M3U8 文件可能会提供互联网电台的在线文件参考。另一个文件可能是在你的电脑上创建的，用于为你的个人音乐或一系列视频建立播放列表。
+            <p>
+                无论哪种方式，效果都是一样的：你可以打开文件，快速轻松地开始播放播放列表指向的内容。如果你发现自己想反复听同一首歌，你可以制作一个 M3U8 文件，作为在媒体播放器中播放这些特定曲目的快捷方式。
+            <p>
+                文件可以使用绝对路径、相对路径和 URL 来指向特定的媒体文件和/或媒体文件的整个文件夹。文件中的其他信息可能是描述文件内容的注释。
+
+            <p>
+                M3U8是一种播放多媒体列表的文件格式，它的设计初衷是为了播放音频文件，比如MP3，但是越来越多的软件现在用来播放视频文件列表，M3U8也可以指定在线流媒体音频源。很多<a href="http://m3u8player.org">播放器</a>和软件都支持M3U8文件格式。
+            </p>
+
+        </div>
+
+        <p>
+            <span>"If something is important enough, even if the odds are against you, you should still do it."
+                <br />如果一件事情对你很重要，即使成功的概率很小，你也应该去做 —— <strong>埃隆马斯克</strong>
+            </span>
+            <br>
+            <br>
+            <br>
+            <span style="font-size: 14px;">资源来源于网络，如有侵权，请联系客服予以删除！</span>
+            <br>
+
+            <span style="font-size: 14px;">© 2019 - 2023 </span>
+ 
+            <p>友情链接：
+                <a href="https://csdn.net">CSDN</a>  | 
+                <a href="https://cnblogs.com">博客园</a> | 
+                <a href="https://fktool.com">在线工具网</a> | 
+                <a href="https://gitapp.cn">程序设计网</a> | 
+                <a href="https://m3u8player.org/">m3u8播放器</a>
+            </p>
+        </p>
+
+    </div>
+
+
+
+    <script>
+        var $config = {
+            title: 'm3u8在线播放器',
+            description: 'm3u8在线播放器',
+            sites: ['weibo', 'qzone', 'douban', 'facebook', 'twitter', 'linkedin'],
+            wechatQrcodeTitle: "微信扫一扫：分享", // 微信二维码提示文字
+            wechatQrcodeHelper: '<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>',
+        };
+
+        socialShare('#share', $config)
+    </script>
+
+ 
+
+    <script>
+
+        
+        var player = undefined;
+
+
+        function play() {
+            
+            let url = $("#url").val()
+
+            if(player === undefined) {
+                player = TCPlayer('player-container-id', {
+                sources: [{
+                    src: url,
+                }],
+                // licenseUrl需自己去腾讯云申请
+                licenseUrl: 'https://xxxxxxxxxxxxxx',
+            }); 
+            }
+
+
+            player.pause();
+            console.log(url)
+            player.src(url); // url 播放地址
+        }
+
+    </script>
+
+</body>
+
+</html>
