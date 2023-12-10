@@ -6,7 +6,7 @@
 https://m3u8player.org
 
 
-# 部署步骤
+## 部署步骤
 
 1.申请云播SDK的licenseUrl，申请地址是 https://console.cloud.tencent.com/vcube/web?tab=player
 
