@@ -21,5 +21,6 @@ https://m3u8player.org
 
 ## 参考效果
 
-[m3u8player](https://m3u8player-cm4.pages.dev/)
-[vercel-alpha](https://m3u8player-alpha.vercel.app/)
+- [m3u8player](https://m3u8player-cm4.pages.dev/)
+
+- [vercel-alpha](https://m3u8player-alpha.vercel.app/)
