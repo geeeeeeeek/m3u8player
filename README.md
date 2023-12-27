@@ -17,3 +17,9 @@ https://m3u8player.org
 
 
 访问入口是index.html
+
+
+## 参考效果
+
+[m3u8player](https://m3u8player-cm4.pages.dev/)
+[vercel-alpha](https://m3u8player-alpha.vercel.app/)
