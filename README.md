@@ -26,3 +26,5 @@ https://m3u8player.org
 - [m3u8player](https://m3u8player-cm4.pages.dev/)
 
 - [vercel-alpha](https://m3u8player-alpha.vercel.app/)
+
+- [Reprodutor M3U8](https://m3u8player.org/pt/)
