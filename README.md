@@ -28,3 +28,10 @@ https://m3u8player.org
 - [vercel-alpha](https://m3u8player-alpha.vercel.app/)
 
 - [Reprodutor M3U8](https://m3u8player.org/pt/)
+
+- [m3u8 player online](https://m3u8player.org/en/)
+
+- [m3u8 to mp4](https://m3u8player.org/en/m3u8_to_mp4/)
+
+
+
