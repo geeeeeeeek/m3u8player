@@ -23,7 +23,7 @@ https://m3u8player.org
 
 ## 视频教学
 
-[https://youtu.be/zSuEPMbgaNU?si=kr7IvpP5fgj_Ueqm](https://youtu.be/zSuEPMbgaNU?si=kr7IvpP5fgj_Ueqm)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zSuEPMbgaNU?si=ILyYQSmoM-C0hzOw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## 参考效果
