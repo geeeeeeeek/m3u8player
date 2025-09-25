@@ -21,6 +21,11 @@ https://m3u8player.org
 访问入口是index.html
 
 
+## 视频教学
+
+[https://youtu.be/zSuEPMbgaNU?si=kr7IvpP5fgj_Ueqm](https://youtu.be/zSuEPMbgaNU?si=kr7IvpP5fgj_Ueqm)
+
+
 ## 参考效果
 
 - [m3u8player](https://m3u8player-cm4.pages.dev/)
