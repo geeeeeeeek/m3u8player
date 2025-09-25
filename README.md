@@ -23,7 +23,7 @@ https://m3u8player.org
 
 ## 视频教学
 
-[![Watch the video](https://img.youtube.com/vi/zSuEPMbgaNU/hqdefault.jpg)](https://www.youtube.com/watch?v=zSuEPMbgaNU)
+https://youtu.be/zSuEPMbgaNU?si=bpg3kuY8tuOfrue7
 
 
 ## 参考效果
