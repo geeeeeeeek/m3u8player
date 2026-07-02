@@ -26,17 +26,10 @@ https://m3u8player.org
 https://youtu.be/zSuEPMbgaNU?si=bpg3kuY8tuOfrue7
 
 
-## 参考效果
+## 我使用的服务器
 
-- [m3u8player](https://m3u8player-cm4.pages.dev/)
+https://github.com/geeeeeeeek/side_pro/blob/master/docs/low-price-vps.md
 
-- [vercel-alpha](https://m3u8player-alpha.vercel.app/)
-
-- [Reprodutor M3U8](https://m3u8player.org/pt/)
-
-- [m3u8 player online](https://m3u8player.org/en/)
-
-- [m3u8 to mp4](https://m3u8player.org/en/m3u8_to_mp4/)
 
 
 
