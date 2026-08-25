@@ -26,7 +26,7 @@ https://m3u8player.org
 https://youtu.be/zSuEPMbgaNU?si=bpg3kuY8tuOfrue7
 
 
-## 我使用的服务器
+## vps服务器推荐
 
 https://github.com/geeeeeeeek/side_pro/blob/master/docs/low-price-vps.md
 
